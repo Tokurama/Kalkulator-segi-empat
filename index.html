@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matematik Segi Empat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kalkulator Matematik Segi Empat & Segitiga</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" onclick="switchTab('rectangle')">Segi Empat</button>
+                <button class="tab-btn" onclick="switchTab('triangle')">Segitiga</button>
+            </div>
+
+            <!-- Rectangle Calculator -->
+            <div id="rectangle-calculator" class="calculator-content active">
+                <div class="calculator-section">
+                    <div class="image-container">
+                        <img id="rectangle-image" src="rectangle.png" alt="Gambar Segi Empat 2D" />
+                    </div>
+                    
+                    <div class="input-section">
+                        <h2>Masukkan Ukuran Segi Empat</h2>
+                        
+                        <div class="input-group">
+                            <label for="panjang">Panjang (cm):</label>
+                            <input type="number" id="panjang" placeholder="Masukkan panjang" min="0" step="0.1">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="lebar">Lebar (cm):</label>
+                            <input type="number" id="lebar" placeholder="Masukkan lebar" min="0" step="0.1">
+                        </div>
+                        
+                        <button id="hitung-rectangle-btn" onclick="hitungSegiEmpat()">Hitung</button>
+                        <button id="reset-rectangle-btn" onclick="resetKalkulator('rectangle')">Reset</button>
+                    </div>
+                </div>
+                
+                <div class="result-section">
+                    <h2>Hasil Perhitungan Segi Empat</h2>
+                    <div class="result-container">
+                        <div class="result-item">
+                            <span class="result-label">Luas:</span>
+                            <span id="hasil-luas-rectangle" class="result-value">-</span>
+                            <span class="result-unit">cm²</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Keliling:</span>
+                            <span id="hasil-keliling-rectangle" class="result-value">-</span>
+                            <span class="result-unit">cm</span>
+                        </div>
+                    </div>
+                    
+                    <div class="formula-section">
+                        <h3>Rumus yang Digunakan:</h3>
+                        <div class="formula">
+                            <p><strong>Luas = Panjang × Lebar</strong></p>
+                            <p><strong>Keliling = 2 × (Panjang + Lebar)</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Triangle Calculator -->
+            <div id="triangle-calculator" class="calculator-content">
+                <div class="calculator-section">
+                    <div class="image-container">
+                        <img id="triangle-image" src="triangle.png" alt="Gambar Segitiga 2D" />
+                    </div>
+                    
+                    <div class="input-section">
+                        <h2>Masukkan Ukuran Segitiga</h2>
+                        
+                        <div class="input-group">
+                            <label for="alas">Alas (cm):</label>
+                            <input type="number" id="alas" placeholder="Masukkan alas" min="0" step="0.1">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="tinggi">Tinggi (cm):</label>
+                            <input type="number" id="tinggi" placeholder="Masukkan tinggi" min="0" step="0.1">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="sisi1">Sisi 1 (cm):</label>
+                            <input type="number" id="sisi1" placeholder="Masukkan sisi 1" min="0" step="0.1">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="sisi2">Sisi 2 (cm):</label>
+                            <input type="number" id="sisi2" placeholder="Masukkan sisi 2" min="0" step="0.1">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="sisi3">Sisi 3 (cm):</label>
+                            <input type="number" id="sisi3" placeholder="Masukkan sisi 3" min="0" step="0.1">
+                        </div>
+                        
+                        <button id="hitung-triangle-btn" onclick="hitungSegitiga()">Hitung</button>
+                        <button id="reset-triangle-btn" onclick="resetKalkulator('triangle')">Reset</button>
+                    </div>
+                </div>
+                
+                <div class="result-section">
+                    <h2>Hasil Perhitungan Segitiga</h2>
+                    <div class="result-container">
+                        <div class="result-item">
+                            <span class="result-label">Luas:</span>
+                            <span id="hasil-luas-triangle" class="result-value">-</span>
+                            <span class="result-unit">cm²</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Keliling:</span>
+                            <span id="hasil-keliling-triangle" class="result-value">-</span>
+                            <span class="result-unit">cm</span>
+                        </div>
+                    </div>
+                    
+                    <div class="formula-section">
+                        <h3>Rumus yang Digunakan:</h3>
+                        <div class="formula">
+                            <p><strong>Luas = ½ × Alas × Tinggi</strong></p>
+                            <p><strong>Keliling = Sisi 1 + Sisi 2 + Sisi 3</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Kalkulator Matematik Segi Empat & Segitiga. Dibuat oleh Tantra</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
