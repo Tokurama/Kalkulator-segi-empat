@@ -1,1 +1,1 @@
-# Kalkulator-segi-empat
+# Kalkulator-segi-empat dan segi-tiga
